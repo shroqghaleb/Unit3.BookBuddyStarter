@@ -11,3 +11,57 @@ body {
 }
 
 /* Add your own custom styles here */
+.account-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.account-info {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.account-info p {
+  margin: 0.5rem 0;
+}
+
+/* Navigation styles */
+.nav-container {
+  padding: 1rem;
+  background-color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.nav-link {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-link:hover {
+  color: #666;
+}
+
+/* Main content area */
+.main-content {
+  padding: 1rem;
+}
+
+/* Books list styles */
+.books-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.books-list {
+  list-style: none;
+  padding: 0;
+}
+
+.books-list li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
