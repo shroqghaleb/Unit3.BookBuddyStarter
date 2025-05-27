@@ -10,47 +10,72 @@ body {
   margin-right: 10px;
 }
 
-/* Add your own custom styles here */
+
 .account-container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
 }
 
 .account-info {
-  background-color: #f5f5f5;
-  padding: 1rem;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
   border-radius: 8px;
-  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .account-info p {
   margin: 0.5rem 0;
 }
 
-/* Navigation styles */
+
 .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
-  background-color: #f0f0f0;
-  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
 }
 
 .nav-link {
-  margin-right: 1rem;
   text-decoration: none;
   color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
 }
 
 .nav-link:hover {
-  color: #666;
+  background-color: #e9ecef;
 }
 
-/* Main content area */
+.logout-button {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #e9ecef;
+}
+
+
 .main-content {
   padding: 1rem;
 }
 
-/* Books list styles */
+
 .books-container {
   max-width: 800px;
   margin: 0 auto;
@@ -64,4 +89,301 @@ body {
 .books-list li {
   padding: 0.5rem;
   border-bottom: 1px solid #eee;
+}
+
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.book-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+}
+
+.book-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.availability {
+  color: #666;
+  font-style: italic;
+}
+
+.view-details {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.view-details:hover {
+  background-color: #0056b3;
+}
+
+/* Login and Register Forms */
+.login-container,
+.register-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-container form,
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-container div,
+.register-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-container input,
+.register-container input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-container button,
+.register-container button {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #f8d7da;
+  border-radius: 4px;
+}
+
+
+.book-details {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+  margin-top: 1rem;
+}
+
+.checkout-button,
+.return-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.checkout-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.checkout-button:hover {
+  background-color: #218838;
+}
+
+.return-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.return-button:hover {
+  background-color: #c82333;
+}
+
+.auth-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.login-link {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+.login-link:hover {
+  color: #0056b3;
+}
+
+.checkout-button:disabled,
+.return-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+
+.search-container {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav div {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+nav a:hover {
+  background-color: #e9ecef;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+nav button:hover {
+  background-color: #e9ecef;
+}
+
+.checked-out-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.book-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 1rem;
+}
+
+.book-cover {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.book-details {
+  flex: 1;
+}
+
+.book-details h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.book-details p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.view-details {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.view-details:hover {
+  background-color: #0056b3;
 }
